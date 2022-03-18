@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :subs,
+    foreign_key: :moderator_id,
+    class_name: :Sub
+
   def ensure_session_token
     self.session_token ||= User.generate_session_token
   end

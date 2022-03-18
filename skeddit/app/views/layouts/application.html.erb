@@ -11,5 +11,11 @@
 
   <body>
     <%= yield %>
+    <% if logged_in? %>
+      <form action="<%= session_url %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Lizz0LogOut">
+      </form>
+    <% end %>
   </body>
 </html>

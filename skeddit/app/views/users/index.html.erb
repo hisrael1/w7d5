@@ -1,1 +1,17 @@
-<h1> SKEET</h1>
+<h1> SKITTLE DEE SKAT</h1>
+<h2>HARRY GOT ALL OF DAT</h2>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.username %></li>
+
+    <% if user.username.include?("harry") %>
+      <p>is a champ</p>
+    <% else %>
+      <p>I'm just an ordinary boy</p>
+    <% end %>
+
+  <% end %>
+</ul>
+
+<div>The rules of this page are that there are no rules #BradPitt</div>

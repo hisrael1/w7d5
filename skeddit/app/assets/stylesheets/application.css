@@ -14,11 +14,17 @@
  *= require_self
  */
 
- h1 {
+ h1, H2 {
    color: rebeccapurple;
    margin-left: 20px;
    margin-right: 20px;
    border-bottom: 5px solid;
    display: flex;
    justify-content: center;
+ }
+ 
+ div {
+   display: flex;
+   justify-content: center;
+   color: brown;
  }
