@@ -10,7 +10,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   def ensure_session_token
-    self.session_token ||= self.generate_session_token
+    self.session_token ||= User.generate_session_token
   end
 
   def self.generate_session_token
@@ -36,7 +36,7 @@ class User < ApplicationRecord
 
   def reset_session_token!
     #
-    self.session_token = self.generate_session_token
+    self.session_token = User.generate_session_token
     self.save!
     self.session_token
   end
